@@ -1,0 +1,58 @@
+﻿@model TEST_DEV.Models.ViewModel.PostPersonaFisicaViewModel
+@{
+    ViewBag.Title = "Agregar persona";
+}
+
+<br />
+<br />
+<br />
+<h2>Agregar persona fisica</h2>
+
+@using (Html.BeginForm("AgregarPersona", "PersonaFisica", FormMethod.Post))
+{
+
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                @Html.LabelFor(x => x.Nombre)
+                @Html.TextBoxFor(x => x.Nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "aviso" })
+                <br />
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(x => x.ApellidoPaterno)
+                @Html.TextBoxFor(x => x.ApellidoPaterno, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ApellidoPaterno, null, new { @class = "aviso" })
+                <br />
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(x => x.ApellidoMaterno)
+                @Html.TextBoxFor(x => x.ApellidoMaterno, "", new { @class = "form-control" })
+                <br />
+            </div>
+            
+            <div>
+                @Html.LabelFor(x => x.RFC)
+                @Html.TextBoxFor(x => x.RFC, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.RFC, null, new { @class = "aviso" })
+                <br />
+            </div>
+            <br />
+            @Html.LabelFor(x => x.FechaNacimiento)
+            <br />
+            @Html.EditorFor(x => x.FechaNacimiento, "", new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.ValidationMessageFor(x => x.FechaNacimiento, null, new { @class = "aviso" })
+            <br />
+
+            <div style="text-align:right">
+                <input value="Guardar" type="submit" class="btn btn-primary" />
+            </div>
+
+        </div>
+
+    </div>
+}

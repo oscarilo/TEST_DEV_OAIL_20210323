@@ -1,0 +1,40 @@
+﻿@model List<TEST_DEV.Models.ViewModel.GetPersonaFisicaViewModel>
+
+@{
+    ViewBag.Title = "PersonaFisicaView";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div style="text-align:right">
+    <a href="~/PersonaFisica/AgregarPersona" class="btn btn-default">Agregar persona</a>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido paterno</th>
+                <th>Apellido materno</th>
+                <th>RFC</th>
+                <th>Fecha nacimiento</th>
+                <th>Estado</th>
+
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.Nombre</td>
+                    <td>@i.ApellidoPaterno</td>
+                    <td>@i.ApellidoMaterno</td>
+                    <td>@i.RFC</td>
+                    <td>@i.FechaNacimiento</td>
+                    <td>@i.Activo</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

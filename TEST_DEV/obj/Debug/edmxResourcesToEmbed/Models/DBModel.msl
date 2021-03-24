@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TEST_DEVModelStoreContainer" CdmEntityContainer="TEST_DEVEntities1">
+    <EntitySetMapping Name="Tb_PersonasFisicas">
+      <EntityTypeMapping TypeName="TEST_DEVModel.Tb_PersonasFisicas">
+        <MappingFragment StoreEntitySet="Tb_PersonasFisicas">
+          <ScalarProperty Name="IdPersonaFisica" ColumnName="IdPersonaFisica" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizarPersonaFisica" FunctionName="TEST_DEVModel.Store.sp_ActualizarPersonaFisica" />
+    <FunctionImportMapping FunctionImportName="sp_AgregarPersonaFisica" FunctionName="TEST_DEVModel.Store.sp_AgregarPersonaFisica" />
+    <FunctionImportMapping FunctionImportName="sp_EliminarPersonaFisica" FunctionName="TEST_DEVModel.Store.sp_EliminarPersonaFisica" />
+  </EntityContainerMapping>
+</Mapping>
